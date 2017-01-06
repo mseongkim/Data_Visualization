@@ -1,7 +1,7 @@
 #Time-series Data Visualization using ggplot
 
 library(ggplot2)
-data = read.csv("vix_timeseries_data.csv",header = T,stringsAsFactor=F)
+data = read.csv("vix_timeseries_data.csv",header = T,stringsAsFactor = F)
 data$Date <- as.Date(as.character(data$Date),format = "%Y%m%d")
 data_date = data$Date
 data_price = data$Vix_Price
