@@ -31,7 +31,7 @@ dt = 4
 ggplot() +
   geom_line(mapping = aes(data_date,data_price),color = "blue",size = 0.2,alpha = 0.4) + theme_bw() +
   labs(title = "VIX Index Daily Closing Price", x = "Time", y = "Price") +
-  geom_rect(data = local_maxima_result,mapping = aes(xmin = local_date-dt, xmax = local_date+dt, 
+  geom_rect(data = local_maxima_result, mapping = aes(xmin = local_date - dt, xmax = local_date + dt, 
             ymin = -Inf, ymax = +Inf),fill = 'pink',alpha = 0.4,linetype = "blank") +
   geom_point(data = local_maxima_result, mapping = aes(x = local_date, y = local_peak),
              color = "red", size = 1.5)
